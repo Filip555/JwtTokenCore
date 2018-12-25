@@ -1,3 +1,4 @@
+import { ValueResolver } from './_resolvers/value.resolver';
 import { AuthGuard } from './_guards/auth-guard.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './_services/AuthService.service';
@@ -8,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
 import { PrivateComponent } from './Private/Private.component';
+import { ValueComponent } from './Value/Value.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
-      PrivateComponent
+      PrivateComponent,
+      ValueComponent
    ],
    imports: [
       BrowserModule,
@@ -22,7 +25,8 @@ import { PrivateComponent } from './Private/Private.component';
    ],
    providers: [
       AuthService,
-      AuthGuard
+      AuthGuard,
+      ValueResolver
    ],
    bootstrap: [
       AppComponent
