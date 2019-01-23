@@ -1,3 +1,7 @@
-<p>
-  Home works!
-</p>
+<h1 class="d-flex justify-content-center align-items-center vertical-center" *ngIf="tokenExist()">Hi! <b>
+    {{decodedToken?.nameid}} </b></h1>
+<div class="d-flex justify-content-center align-items-center vertical-center" style="height:100px;">
+  <div class="form-group">
+    <button class="btn btn-success" (click)="getToken()">Get and save token</button>
+  </div>
+</div>
